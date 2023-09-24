@@ -1,6 +1,9 @@
 function generateTicket() {
     const selectedSeance = JSON.parse(localStorage.getItem("selectedSeance"));
-
+    const ticketTitle = document.querySelector(".ticket__title");
+    const ticketChairs = document.querySelector(".ticket__chairs");
+    const ticketHall = document.querySelector(".ticket__hall");
+    const ticketStart = document.querySelector(".ticket__start");
     const selectedPlaces = [];
     let totalPrice = 0;
 
@@ -11,10 +14,7 @@ function generateTicket() {
         totalPrice += type === "standart" ? Number(selectedSeance.priceStandart) : Number(selectedSeance.priceVip);
     }
 
-    const ticketTitle = document.querySelector(".ticket__title");
-    const ticketChairs = document.querySelector(".ticket__chairs");
-    const ticketHall = document.querySelector(".ticket__hall");
-    const ticketStart = document.querySelector(".ticket__start");
+    
 
     ticketTitle.textContent = selectedSeance.filmName;
     ticketChairs.textContent = selectedPlaces.join(", ");

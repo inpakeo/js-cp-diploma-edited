@@ -98,6 +98,34 @@ body {
   background: rgba(241, 235, 230, 0.95);
   color: #000000;
 }
+
+@media(max-width: 320px) {
+  .movie .movie__info {
+    display: flex;
+    flex-direction: column;
+  }
+  .movie .movie__poster {
+    position: relative;
+    height: auto;
+    width: 50%;
+    margin: auto;
+  }
+  .movie .movie__poster .movie__poster-image {
+    position: relative;
+    top: -3rem;
+    height: auto;
+    width: 100%;
+  }
+  .movie .movie__description {
+    flex-grow: 1;
+    padding-left: 0;
+    margin-bottom: 3rem;
+  }
+}
+
+
+
+
 .movie .movie__info {
   display: flex;
 }
@@ -105,8 +133,6 @@ body {
   position: relative;
   width: 12.5rem;
   height: 17.5rem;
-  /*    left: 1.5rem;
-      top: -1.5rem;*/
 }
 .movie .movie__poster .movie__poster-image {
   position: relative;
@@ -442,5 +468,3 @@ body {
   background-color: #888888;
   pointer-events: none
  }
-
-

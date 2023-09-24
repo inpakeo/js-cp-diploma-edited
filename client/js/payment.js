@@ -18,6 +18,7 @@ ticketChairsElement.textContent = places;
 ticketHallElement.textContent = selectedSeance.hallName;
 ticketStartElement.textContent = selectedSeance.seanceTime;
 ticketCostElement.textContent = price;
+
 const newHallConfig = selectedSeance.hallConfig.replace(/selected/g, "taken");
 
 acceptinButton.addEventListener("click", async (event) => {
